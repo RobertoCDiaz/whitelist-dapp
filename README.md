@@ -2,22 +2,14 @@
 
 Web descentralized application to give early supporters of a new NFT Colletion access to a whitelist.
 
-## Installation and configuration
-
-
-### Install project and its dependencies
-1. Clone repository and npm install dependencies:
-
-```bash
-git clone https://github.com/RobertoCDiaz/whitelist-dapp.git
-```
+## Installation
 
 2. Go to both the `hardhat` and `whitelist-website` directories and install their npm dependencies.
 ```bash
 npm i
 ```
 
-### Smart Contract configuration and deployment
+## Smart Contract configuration and deployment
 
 Go into the `hardhat` directory. Once there, do as following steps indicate. 
 
@@ -42,7 +34,7 @@ npm run deploy
 
 Inside the [HardHat config](hardhat.config.js) file, a network called 'rinkeby' was created using the information provided through the environment variables.
 
-### Start Next.js development server
+## Next.js server start
 
 To start the Next.js dev server, execute the following command inside the `whitelist-website` directory:
 
