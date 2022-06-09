@@ -27,6 +27,8 @@ export default function Home() {
    * Gets the Web3 Provider, or a Web3 Signer if needed.
    * 
    * @param {*} needSigner - Set to true if a signer is needed. Otherwise, it can stay as false.
+   * 
+   * @returns A provider if a signer is not needed. A signer if `true` is passed on as an argument.
    */
   const getProviderOrSigner = async (needSigner = false) => {
     try {
