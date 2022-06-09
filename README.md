@@ -4,6 +4,12 @@ Web descentralized application to give early supporters of a new NFT Colletion a
 
 ## Installation
 
+1. Clone repository and npm install dependencies:
+
+```bash
+git clone https://github.com/RobertoCDiaz/whitelist-dapp.git
+```
+
 2. Go to both the `hardhat` and `whitelist-website` directories and install their npm dependencies.
 ```bash
 npm i
@@ -36,6 +42,8 @@ Inside the [HardHat config](hardhat.config.js) file, a network called 'rinkeby' 
 
 ## Next.js server start
 
+
+### Development server
 To start the Next.js dev server, execute the following command inside the `whitelist-website` directory:
 
 ```bash
