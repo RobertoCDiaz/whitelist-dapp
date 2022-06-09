@@ -115,14 +115,14 @@ export default function Home() {
     try {
       // even though we are not explicitly writing to the blockchain, we still need a signer
       // because from it we can obtain the user address
-      const provider = await getProviderOrSigner();
+      const signer = await getProviderOrSigner(true);
       const contract = new Contract(
         WHITELIST_CONTRACT_ADDRESS,
         abi,
-        provider,
+        signer,
       );
 
-      setIsUserWhitelisted(await contract.isInWhitelist());
+      setIsUserWhitelisted(await contract.whitelisted(signer.getAddress()));
     } catch (err) {
       console.log(err)
     }
@@ -194,8 +194,8 @@ export default function Home() {
 
       connectWallet();
     }
-
-  }, [isWalletConnected]);
+    
+  }, [isWalletConnected, isUserWhitelisted]);
 
   return (
     <div className={styles.page}>
